@@ -14,6 +14,11 @@ public class SimpleBot {
 
     public static void main(String[] args) {
         //Creates the gateway client and connects to the gateway
+        
+          final GatewayDiscordClient client = DiscordClientBuilder.create("MTAwMzAwODYyNTQwNjY1NjU2Mg.G79phJ._g_sNuuCvhwAnabPL3Gdif93JIr6kG5I3L_lb0").build()
+            .login()
+            .block();
+
         final GatewayDiscordClient client = DiscordClientBuilder.create(System.getenv("BOT_TOKEN")).build()
             .login()
             .block();
